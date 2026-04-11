@@ -29,4 +29,12 @@ public class trionic {
 
         return i == n && i > valley;
     }
+
+    public static void main(String[] args) {
+        trionic sol = new trionic();
+        int[] nums1 = {1, 2, 3, 2, 1};
+        System.out.println("Is trionic [1,2,3,2,1]: " + sol.isTrionic(nums1));
+        int[] nums2 = {1, 2, 2, 1};
+        System.out.println("Is trionic [1,2,2,1]: " + sol.isTrionic(nums2));
+    }
 }

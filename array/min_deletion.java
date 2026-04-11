@@ -18,4 +18,10 @@ public class min_deletion {
 
         return deletions;
     }
+
+    public static void main(String[] args) {
+        min_deletion sol = new min_deletion();
+        String s = "aaabbb";
+        System.out.println("Minimum deletions: " + sol.minimumDeletions(s));
+    }
 }

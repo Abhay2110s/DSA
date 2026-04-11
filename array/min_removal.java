@@ -20,5 +20,12 @@ public class min_removal {
         // Minimum removals = Total - Maximum elements kept
         return n - maxKept;
     }
+
+    public static void main(String[] args) {
+        min_removal sol = new min_removal();
+        int[] nums = {1, 2, 3, 1, 2, 3};
+        int k = 3;
+        System.out.println("Minimum removals: " + sol.minRemoval(nums, k));
+    }
 }
 

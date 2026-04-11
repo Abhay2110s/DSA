@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/transformed-array/description/?envType=daily-question&envId=2026-02-05
 
-;public class transformed_array {
+public class transformed_array {
     public int[] constructTransformedArray(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];

@@ -65,4 +65,10 @@ public class trionic_II {
         return maxsum;
         
     }
+
+    public static void main(String[] args) {
+        trionic_II sol = new trionic_II();
+        int[] nums = {1, 2, 3, 2, 1, 2, 3};
+        System.out.println("Max sum trionic: " + sol.maxSumtrionic(nums));
+    }
 }
