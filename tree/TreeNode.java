@@ -52,4 +52,28 @@ class balance_bst {
 
         return newNode;
     }
+
+    private void inorderPrint(TreeNode node) {
+        if (node == null) return;
+        inorderPrint(node.left);
+        System.out.print(node.val + " ");
+        inorderPrint(node.right);
+    }
+
+    public static void main(String[] args) {
+        balance_bst sol = new balance_bst();
+        
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.left.left = new TreeNode(3);
+        
+        System.out.print("Original tree (inorder): ");
+        sol.inorderPrint(root);
+        System.out.println();
+        
+        TreeNode balanced = sol.balanceBST(root);
+        System.out.print("Balanced tree (inorder): ");
+        sol.inorderPrint(balanced);
+        System.out.println();
+    }
 }

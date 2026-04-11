@@ -76,5 +76,18 @@ public class longestBalancedsubstringII{
     private long f(int x, int y) {
         return (x + 100000) << 20 | (y + 100000);
     }  
+
+    public static void main(String[] args) {
+        longestBalancedsubstringII sol = new longestBalancedsubstringII();
+        
+        String s1 = "aabbcc";
+        System.out.println("Longest balanced for '" + s1 + "': " + sol.longestBalanced(s1));
+        
+        String s2 = "abcabc";
+        System.out.println("Longest balanced for '" + s2 + "': " + sol.longestBalanced(s2));
+        
+        String s3 = "aaaa";
+        System.out.println("Longest balanced for '" + s3 + "': " + sol.longestBalanced(s3));
+    }
 }
 

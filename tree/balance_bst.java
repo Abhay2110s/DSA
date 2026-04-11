@@ -1,19 +1,20 @@
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
+import java.util.ArrayList;
+import java.util.List;
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
 class balance_bst {
     // List to store the values of the tree in sorted order
     private List<Integer> sortedList = new ArrayList<>();
@@ -49,5 +50,29 @@ class balance_bst {
         newNode.right = buildBalancedTree(mid + 1, end);
 
         return newNode;
+    }
+
+    private void inorderPrint(TreeNode node) {
+        if (node == null) return;
+        inorderPrint(node.left);
+        System.out.print(node.val + " ");
+        inorderPrint(node.right);
+    }
+
+    public static void main(String[] args) {
+        balance_bst sol = new balance_bst();
+        
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.left.left = new TreeNode(3);
+        
+        System.out.print("Original tree (inorder): ");
+        sol.inorderPrint(root);
+        System.out.println();
+        
+        TreeNode balanced = sol.balanceBST(root);
+        System.out.print("Balanced tree (inorder): ");
+        sol.inorderPrint(balanced);
+        System.out.println();
     }
 }
